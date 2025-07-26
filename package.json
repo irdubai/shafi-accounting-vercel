@@ -1,34 +1,30 @@
 {
-  "name": "shafi-accounting-pro",
-  "version": "2.0.0",
-  "description": "سیستم حسابداری شافی - نسخه پیشرفته آنلاین",
-  "main": "index.js",
+  "name": "shafi-accounting-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Shafi Accounting System Backend",
+  "main": "server.js",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'Build complete - Static files ready'",
-    "start": "vercel dev",
-    "deploy": "vercel --prod"
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "test": "jest",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed.js"
   },
   "dependencies": {
-    "@planetscale/database": "^1.11.0",
-    "mysql2": "^3.6.0"
+    "express": "^4.18.2",
+    "sqlite": "^5.0.1",
+    "sqlite3": "^5.1.6",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "uuid": "^9.0.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
-    "vercel": "^32.0.0"
-  },
-  "keywords": [
-    "accounting",
-    "persian",
-    "business",
-    "invoice",
-    "فارسی",
-    "حسابداری",
-    "فاکتور"
-  ],
-  "author": "موسی بعاجی",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/username/shafi-accounting-pro"
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0"
   }
 }
